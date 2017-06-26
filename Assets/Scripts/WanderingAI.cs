@@ -23,7 +23,7 @@ public class WanderingAI : MonoBehaviour {
 				bool hitPlayer = hit.transform.name == "Player";
 				if (hitPlayer && !_reloading) {
 					GameObject fireball = Instantiate (_fireballPrefab);
-					fireball.transform.position = transform.position;
+					fireball.transform.position = transform.TransformPoint(Vector3.forward*1.5f);
 					fireball.transform.rotation = transform.rotation;
 					StartCoroutine(Reload ());
 					_reloading = true;
