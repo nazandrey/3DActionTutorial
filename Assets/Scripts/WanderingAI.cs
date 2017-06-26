@@ -21,21 +21,18 @@ public class WanderingAI : MonoBehaviour {
 			RaycastHit hit;
 			if (Physics.SphereCast (transform.position, scanningRange, transform.forward, out hit, 1f)) {
 				bool hitPlayer = hit.transform.name == "Player";
-				Debug.Log ("hit.transform.name: " + hit.transform.name);
-				Debug.Log ("hitPlayer: " + hitPlayer);
 				if (hitPlayer && !_reloading) {
 					GameObject fireball = Instantiate (_fireballPrefab);
 					fireball.transform.position = transform.position;
 					fireball.transform.rotation = transform.rotation;
 					StartCoroutine(Reload ());
 					_reloading = true;
-				} else {
-					//float angle = Random.Range (-110, 110);
-					//transform.Rotate (new Vector3 (0, angle, 0));
+				} else if (!hitPlayer){
+					float angle = Random.Range (-110, 110);
+					transform.Rotate (new Vector3 (0, angle, 0));
 				}
 			} else {
-				//transform.Translate (new Vector3 (0, 0, speed * Time.deltaTime));
-
+				transform.Translate (new Vector3 (0, 0, speed * Time.deltaTime));
 			}
 		}
 	}
