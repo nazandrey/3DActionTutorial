@@ -17,13 +17,7 @@ public class Shooting : MonoBehaviour {
 	void Update () {
 		if (Input.GetMouseButtonDown(0)) {			
 			Vector3 target = new Vector3 (_camera.pixelWidth / 2, _camera.pixelHeight / 2, 0);
-
 			RaycastHit hit;
-
-			/*float x = Screen.width / 2;
-			float y = Screen.height / 2;
-
-			Ray ray = _camera.ScreenPointToRay(new Vector3(x, y, 0));*/
 			Ray ray = _camera.ScreenPointToRay(target);
 			if (Physics.Raycast (ray, out hit)) { 
 				ReactiveTarget reactiveTarget = hit.transform.gameObject.GetComponent<ReactiveTarget>();
@@ -32,10 +26,6 @@ public class Shooting : MonoBehaviour {
 				} else {
 					StartCoroutine(CreateSphereAndDestroyAfter (hit.point));
 				}
-			//if (Physics.Raycast (_camera.transform.position, Input.mousePosition, out hit)) { 
-
-
-				//Debug.DrawLine(_camera.transform.position, Input.mousePosition, Color.cyan, 20);
 			}
 		}
 	}
@@ -56,24 +46,4 @@ public class Shooting : MonoBehaviour {
 		yield return new WaitForSeconds (2);
 		Destroy (hitSphere);
 	}
-
-	/*
-	 var crosshairTexture : Texture2D;
-	 var position : Rect;
-	 static var OriginalOn = true;
-	 
-	 function Start()
-	 {
-	     position = Rect((Screen.width - crosshairTexture.width) / 2, (Screen.height - 
-	         crosshairTexture.height) /2, crosshairTexture.width, crosshairTexture.height);
-	 }
-	 
-	 function OnGUI()
-	 {
-	     if(OriginalOn == true)
-	     {
-	         GUI.DrawTexture(position, crosshairTexture);
-	     }
-	 }
-	*/
 }
