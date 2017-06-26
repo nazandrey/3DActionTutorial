@@ -14,4 +14,11 @@ public class Fireball : MonoBehaviour {
 	void Update () {
 		gameObject.transform.Translate (0, 0, speed*Time.deltaTime);
 	}
+
+	void OnTriggerEnter(Collider other){
+		if (other.transform.name == "Player") {
+			Debug.Log ("Player hit");
+		}
+		Destroy (gameObject);
+	}
 }

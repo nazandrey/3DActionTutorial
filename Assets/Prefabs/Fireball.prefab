@@ -22,8 +22,8 @@ GameObject:
   - component: {fileID: 33383883059849382}
   - component: {fileID: 135255636353743370}
   - component: {fileID: 23209611886885548}
-  - component: {fileID: 54701940514978820}
   - component: {fileID: 114857887777791350}
+  - component: {fileID: 54338550350314898}
   m_Layer: 0
   m_Name: Fireball
   m_TagString: Untagged
@@ -82,7 +82,7 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1603024347163964}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
---- !u!54 &54701940514978820
+--- !u!54 &54338550350314898
 Rigidbody:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -117,7 +117,7 @@ SphereCollider:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1603024347163964}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5
