@@ -6,12 +6,6 @@ public class SceneController : MonoBehaviour {
 	[SerializeField] private GameObject _enemyPrefab;
 	private GameObject _enemy = null;
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
 	void Update () {
 		if (_enemy == null) {
 			_enemy = Instantiate (_enemyPrefab) as GameObject;

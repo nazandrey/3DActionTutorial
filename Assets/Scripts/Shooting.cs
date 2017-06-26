@@ -7,7 +7,6 @@ using UnityEngine;
 public class Shooting : MonoBehaviour {
 	private Camera _camera;
 
-	// Use this for initialization
 	void Start () {
 		_camera = gameObject.GetComponent<Camera> ();	
 
@@ -15,10 +14,7 @@ public class Shooting : MonoBehaviour {
 		Cursor.lockState = CursorLockMode.Locked;
 	}
 	
-	// Update is called once per frame
 	void Update () {
-		
-
 		if (Input.GetMouseButtonDown(0)) {			
 			Vector3 target = new Vector3 (_camera.pixelWidth / 2, _camera.pixelHeight / 2, 0);
 

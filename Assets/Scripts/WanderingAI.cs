@@ -10,12 +10,10 @@ public class WanderingAI : MonoBehaviour {
 	private bool _alive;
 	private bool _reloading;
 
-	// Use this for initialization
 	void Start () {
 		_alive = true;
 	}
 	
-	// Update is called once per frame
 	void Update () {
 		if (_alive) {
 			RaycastHit hit;
