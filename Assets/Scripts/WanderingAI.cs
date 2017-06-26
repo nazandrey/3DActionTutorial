@@ -5,7 +5,7 @@ using UnityEngine;
 public class WanderingAI : MonoBehaviour {
 
 	public float speed = 1f;
-	public float scanningRange = 1f;
+	public float scanningRange = 0.5f;
 	[SerializeField] private GameObject _fireballPrefab;
 	private bool _alive;
 	private bool _reloading;
