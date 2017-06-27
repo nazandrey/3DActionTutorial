@@ -188,7 +188,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
-  scanningRange: 0.5
+  scanningRange: 3
   _fireballPrefab: {fileID: 1603024347163964, guid: 6a026154eba416047bbb2cd9afceebbf,
     type: 2}
 --- !u!114 &114263111291194546
