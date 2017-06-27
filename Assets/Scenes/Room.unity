@@ -330,7 +330,6 @@ Prefab:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7acac1f82db83084f85164804d84b637, type: 2}
-  m_RootGameObject: {fileID: 874184980}
   m_IsPrefabParent: 0
 --- !u!1 &464587404
 GameObject:
@@ -543,6 +542,7 @@ GameObject:
   - component: {fileID: 874184987}
   - component: {fileID: 874184989}
   - component: {fileID: 874184988}
+  - component: {fileID: 874184990}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -694,6 +694,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &874184990
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 874184980}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fae91d843e39a39468e6d44483ff8551, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 5
 --- !u!1 &975143245
 GameObject:
   m_ObjectHideFlags: 0
