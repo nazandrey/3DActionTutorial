@@ -10,4 +10,4 @@
 Book "Unity in Action: Multiplatform Game Development in C#" by Joe Hocking
 
 #### Repository current version (according this source) ####
-3.5.2
+3.5.3
